@@ -1,43 +1,15 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 02:28 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `topicosweblogin`
---
-CREATE DATABASE IF NOT EXISTS `topicosweblogin` DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;
-USE `topicosweblogin`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `capellid`
---
+CREATE DATABASE IF NOT EXISTS `pa10_avance_pryfinal_c4_a1_7` DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+USE `pa10_avance_pryfinal_c4_a1_7`;
 
 CREATE TABLE IF NOT EXISTS `capellid` (
   `CvApellid` int(3) NOT NULL AUTO_INCREMENT,
   `DsApellid` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvApellid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
---
--- Dumping data for table `capellid`
---
 
 INSERT INTO `capellid` (`CvApellid`, `DsApellid`) VALUES
 (1, 'Rosado'),
@@ -51,21 +23,11 @@ INSERT INTO `capellid` (`CvApellid`, `DsApellid`) VALUES
 (9, 'Alfaro'),
 (10, 'Urias');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ccalle`
---
-
 CREATE TABLE IF NOT EXISTS `ccalle` (
   `CvCalle` int(3) NOT NULL AUTO_INCREMENT,
   `DsCalle` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvCalle`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
---
--- Dumping data for table `ccalle`
---
 
 INSERT INTO `ccalle` (`CvCalle`, `DsCalle`) VALUES
 (1, 'Benito Juarez'),
@@ -73,21 +35,11 @@ INSERT INTO `ccalle` (`CvCalle`, `DsCalle`) VALUES
 (3, 'Peñarol'),
 (4, 'Conde Garay');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ccolon`
---
-
 CREATE TABLE IF NOT EXISTS `ccolon` (
   `CvColon` int(3) NOT NULL AUTO_INCREMENT,
   `DsColon` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvColon`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
---
--- Dumping data for table `ccolon`
---
 
 INSERT INTO `ccolon` (`CvColon`, `DsColon`) VALUES
 (1, 'Xalpa'),
@@ -95,21 +47,11 @@ INSERT INTO `ccolon` (`CvColon`, `DsColon`) VALUES
 (3, 'Santa lucia'),
 (4, 'La libertad');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `cestado`
---
-
 CREATE TABLE IF NOT EXISTS `cestado` (
   `CvEstado` int(3) NOT NULL AUTO_INCREMENT,
   `DsEstado` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvEstado`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
---
--- Dumping data for table `cestado`
---
 
 INSERT INTO `cestado` (`CvEstado`, `DsEstado`) VALUES
 (1, 'Sinaloa'),
@@ -117,31 +59,15 @@ INSERT INTO `cestado` (`CvEstado`, `DsEstado`) VALUES
 (3, 'Veracuz'),
 (4, 'Puebla');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `cgenero`
---
-
 CREATE TABLE IF NOT EXISTS `cgenero` (
   `CvGenero` int(3) NOT NULL AUTO_INCREMENT,
   `DsGenero` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvGenero`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
---
--- Dumping data for table `cgenero`
---
-
 INSERT INTO `cgenero` (`CvGenero`, `DsGenero`) VALUES
 (1, 'Masculino'),
 (2, 'Femenino');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cmunic`
---
 
 CREATE TABLE IF NOT EXISTS `cmunic` (
   `CvMunic` int(3) NOT NULL AUTO_INCREMENT,
@@ -149,31 +75,17 @@ CREATE TABLE IF NOT EXISTS `cmunic` (
   PRIMARY KEY (`CvMunic`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
---
--- Dumping data for table `cmunic`
---
-
 INSERT INTO `cmunic` (`CvMunic`, `DsMunic`) VALUES
 (1, 'San cristobal'),
 (2, 'Soltepec'),
 (3, 'Novalto'),
 (4, 'Cordoba');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `cnombre`
---
-
 CREATE TABLE IF NOT EXISTS `cnombre` (
   `CvNombre` int(3) NOT NULL AUTO_INCREMENT,
   `DsNombre` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvNombre`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
---
--- Dumping data for table `cnombre`
---
 
 INSERT INTO `cnombre` (`CvNombre`, `DsNombre`) VALUES
 (1, 'Juan'),
@@ -182,33 +94,17 @@ INSERT INTO `cnombre` (`CvNombre`, `DsNombre`) VALUES
 (4, 'Apolinar'),
 (5, 'Guadalupe');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ctipoperso`
---
-
 CREATE TABLE IF NOT EXISTS `ctipoperso` (
   `CvTipoPerso` int(3) NOT NULL AUTO_INCREMENT,
   `DsTipoPerso` varchar(20) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`CvTipoPerso`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
---
--- Dumping data for table `ctipoperso`
---
-
 INSERT INTO `ctipoperso` (`CvTipoPerso`, `DsTipoPerso`) VALUES
 (1, 'Empleado'),
 (2, 'Administrador'),
 (3, 'Proveedor'),
 (4, 'Cliente');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mdirecc`
---
 
 CREATE TABLE IF NOT EXISTS `mdirecc` (
   `CvDirecc` int(3) NOT NULL AUTO_INCREMENT,
@@ -225,21 +121,11 @@ CREATE TABLE IF NOT EXISTS `mdirecc` (
   KEY `D_fk_cEstado` (`CvEstado`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
---
--- Dumping data for table `mdirecc`
---
-
 INSERT INTO `mdirecc` (`CvDirecc`, `CvCalle`, `CvColon`, `CvMunic`, `CvEstado`, `NumExt`, `CP`) VALUES
 (1, 2, 4, 3, 1, '17', '89238'),
 (2, 1, 2, 1, 2, '475', '51363'),
 (3, 4, 3, 2, 4, '78', '30232'),
 (4, 3, 1, 4, 3, '398', '30083');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mperso`
---
 
 CREATE TABLE IF NOT EXISTS `mperso` (
   `CvPerso` int(3) NOT NULL AUTO_INCREMENT,
@@ -264,10 +150,6 @@ CREATE TABLE IF NOT EXISTS `mperso` (
   KEY `Per_fk_mDirecc` (`CvDirecc`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
---
--- Dumping data for table `mperso`
---
-
 INSERT INTO `mperso` (`CvPerso`, `CvTipoPerso`, `CvNombre`, `CvApePat`, `CvApeMat`, `CvGenero`, `FecNac`, `Edad`, `RFC`, `CURP`, `Telefono`, `Correo`, `CvDirecc`) VALUES
 (1, 2, 1, 1, 4, 1, '1990-09-09', 32, 'XDF1889654778', 'SDF188965477887LA7', '963-143-76-88', 'esteañoeselbueno@hotmail.com', 1),
 (2, 3, 2, 2, 5, 1, '1980-09-09', 25, 'SDF1889654778', 'WEF188965477887LA2', '963-113-45-54', 'daskjs@outlook.com', 2),
@@ -278,12 +160,6 @@ INSERT INTO `mperso` (`CvPerso`, `CvTipoPerso`, `CvNombre`, `CvApePat`, `CvApeMa
 (7, 2, 5, 7, 9, 1, '1990-07-07', 98, 'fu efyvefyv e', 'sndhv d v', '7854698523', 'miku@ahhhh.com', 4),
 (8, 4, 2, 5, 10, 1, '1990-05-05', 56, 'bg fr rx r', 'iwe uheg eynv', '9657458769', 'correo@correo@correo.dev', 2),
 (9, 2, 3, 10, 2, 1, '1980-05-05', 22, 'jwnugdydbwtdb', 'kwjdunydgby', '9635897456', 'hagowebs@enwordpress.com', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `musuario`
---
 
 CREATE TABLE IF NOT EXISTS `musuario` (
   `CvUser` int(3) NOT NULL AUTO_INCREMENT,
@@ -297,10 +173,6 @@ CREATE TABLE IF NOT EXISTS `musuario` (
   KEY `Usr_fk_cPerso` (`CvPerso`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
---
--- Dumping data for table `musuario`
---
-
 INSERT INTO `musuario` (`CvUser`, `CvPerso`, `NomUser`, `Contrasena`, `FechaIni`, `FechaFin`, `EdoCta`) VALUES
 (1, 2, 'Rosalia', 'chalia', '2022-10-10', '2022-10-19', 0),
 (2, 6, 'Rosario', 'charis', '2022-10-11', '2022-10-21', 0),
@@ -308,22 +180,12 @@ INSERT INTO `musuario` (`CvUser`, `CvPerso`, `NomUser`, `Contrasena`, `FechaIni`
 (4, 9, 'admin', 'admin1', '2022-10-22', '2022-12-02', 1),
 (23, 1, 'Rosado', 'lupe', '2022-11-08', '2022-11-13', 1);
 
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `mdirecc`
---
 ALTER TABLE `mdirecc`
   ADD CONSTRAINT `D_fk_cCalle` FOREIGN KEY (`CvCalle`) REFERENCES `ccalle` (`CvCalle`),
   ADD CONSTRAINT `D_fk_cColon` FOREIGN KEY (`CvColon`) REFERENCES `ccolon` (`CvColon`),
   ADD CONSTRAINT `D_fk_cEstado` FOREIGN KEY (`CvEstado`) REFERENCES `cestado` (`CvEstado`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `D_fk_cMunic` FOREIGN KEY (`CvMunic`) REFERENCES `cmunic` (`CvMunic`);
 
---
--- Constraints for table `mperso`
---
 ALTER TABLE `mperso`
   ADD CONSTRAINT `Per_fk_cApeMat` FOREIGN KEY (`CvApeMat`) REFERENCES `capellid` (`CvApellid`),
   ADD CONSTRAINT `Per_fk_cApePat` FOREIGN KEY (`CvApePat`) REFERENCES `capellid` (`CvApellid`),
@@ -332,13 +194,6 @@ ALTER TABLE `mperso`
   ADD CONSTRAINT `Per_fk_cTipoPerso` FOREIGN KEY (`CvTipoPerso`) REFERENCES `ctipoperso` (`CvTipoPerso`),
   ADD CONSTRAINT `Per_fk_mDirecc` FOREIGN KEY (`CvDirecc`) REFERENCES `mdirecc` (`CvDirecc`) ON DELETE CASCADE ON UPDATE CASCADE;
 
---
--- Constraints for table `musuario`
---
 ALTER TABLE `musuario`
   ADD CONSTRAINT `Usr_fk_cPerso` FOREIGN KEY (`CvPerso`) REFERENCES `mperso` (`CvPerso`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
