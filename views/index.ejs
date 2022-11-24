@@ -1,0 +1,22 @@
+<%- include('./partials/header'); %>
+    <div class="inicio">
+        <% if (login) { %>
+            <h4>Usuario:
+                <strong>
+                    <%= name %>
+                </strong>
+            </h4>
+            <h5>tipos de perosna <%= tipoPersona %> </h5>
+
+            <%} else { %>
+                <h1>
+                    <strong>
+                        <%= name %>
+                    </strong>
+                </h1>
+
+                <a href="login" class="a-login">Iniciar sesión</a>
+                <% } %>
+    </div>
+
+    <%- include('./partials/footer'); %>
